@@ -14,6 +14,7 @@ using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.OpenIddict.EntityFrameworkCore;
 using Volo.Abp.TenantManagement;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
+using Acme.BookStore.Books;
 
 namespace Acme.BookStore.EntityFrameworkCore;
 
@@ -54,6 +55,8 @@ public class BookStoreDbContext :
     // Tenant Management
     public DbSet<Tenant> Tenants { get; set; }
     public DbSet<TenantConnectionString> TenantConnectionStrings { get; set; }
+
+    public DbSet<Book> Books { get; set; }
 
     #endregion
 
